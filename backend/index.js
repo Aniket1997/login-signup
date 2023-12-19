@@ -1,14 +1,19 @@
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+
+dotenv.config(); // Load environment variables from .env
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(cors());
 
+const mongoURI = process.env.MONGO_URI;
+
 mongoose
-  .connect('mongodb+srv://aniket1997:C563ramdashati@cluster0.c0h0xtd.mongodb.net/?retryWrites=true&w=majority', {
+  .connect(mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -71,6 +76,6 @@ app.post('/register', async (req, res) => {
     }
 });
 
-app.listen(9002, () => {
-    console.log('BE started at port 9002');
+app.listen(process.env.PORT || 9002, () => {
+    console.log(`BE started at port ${process.env.PORT || 9002}`);
 });
