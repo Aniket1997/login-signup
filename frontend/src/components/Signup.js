@@ -24,7 +24,7 @@ const Signup = () => {
     const {username,email,password,confirmPassword,mobileNumber} = userData;
     if(username && email && password && confirmPassword && mobileNumber){
         console.log('Form submitted:', userData);
-        axios.post('https://llogin-signup-rxav.vercel.app/register',userData).then((res)=>{
+        axios.post('http://localhost:9002/register',userData).then((res)=>{
             console.log(res);
             toast.done("User register successfully");
         });
