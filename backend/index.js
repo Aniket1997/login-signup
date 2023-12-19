@@ -8,7 +8,11 @@ dotenv.config(); // Load environment variables from .env
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded());
-app.use(cors());
+app.use(cors({
+    origin:['login-signup-chi.vercel.app'],
+    methods:["POST"],
+    credentials: true,
+}));
 
 const mongoURI = process.env.MONGO_URI;
 
