@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(cors({
-    origin:['login-signup-chi.vercel.app'],
+    origin:['login-signup-rxav.vercel.app'],
     methods:["POST"],
     credentials: true,
 }));

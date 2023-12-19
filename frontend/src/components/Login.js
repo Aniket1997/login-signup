@@ -23,7 +23,7 @@ const Login = () => {
     const { email, password } = userData;
     if (email && password) {
       console.log('Form submitted:', userData);
-      axios.post('https://login-signup-chi.vercel.app/login', userData)
+      axios.post('https://login-signup-rxav.vercel.app/login', userData)
         .then((res) => {
           console.log(".......Login data",res.data,res.data.message, typeof res.data.message)
           if(res.data.message === "Login Done"){
