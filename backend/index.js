@@ -95,34 +95,34 @@ app.post('/login', async (req, res) => {
   });
 
 // Add this route to fetch user details by ID
-app.get('/user/:userId', async (req, res) => {
-    try {
-      const userId = req.params.userId;
-      const user = await User.findById(userId);
+// app.get('/user/:userId', async (req, res) => {
+//     try {
+//       const userId = req.params.userId;
+//       const user = await User.findById(userId);
   
-      if (!user) {
-        return res.status(404).json({ message: 'User not found' });
-      }
+//       if (!user) {
+//         return res.status(404).json({ message: 'User not found' });
+//       }
   
-      const { _id, username, email, mobile, profilePicture } = user;
-      const userDetails = {
-        userId: _id,
-        username,
-        email,
-        mobile,
-        profilePicture: profilePicture ? true : false, // Indicates if profile picture is present
-      };
+//       const { _id, username, email, mobile, profilePicture } = user;
+//       const userDetails = {
+//         userId: _id,
+//         username,
+//         email,
+//         mobile,
+//         profilePicture: profilePicture ? true : false, // Indicates if profile picture is present
+//       };
   
-      res.status(200).json({ user: userDetails });
-    } catch (error) {
-      console.error(error);
-      res.status(500).json({ message: 'Error retrieving user details' });
-    }
-  });
+//       res.status(200).json({ user: userDetails });
+//     } catch (error) {
+//       console.error(error);
+//       res.status(500).json({ message: 'Error retrieving user details' });
+//     }
+//   });
 
   
   
-  app.get('/users', async (req, res) => {
+app.get('/users', async (req, res) => {
     try {
       const users = await User.find({});
       if (!users || users.length === 0) {

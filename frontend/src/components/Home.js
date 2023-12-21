@@ -5,6 +5,7 @@ import { BiSearchAlt } from "react-icons/bi";
 import '../css/Home.css';
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
+import PieLoader from './PieLoader';
 
 const Home = () => {
   const location = useLocation();
@@ -40,7 +41,11 @@ const Home = () => {
 
   if (allUsers.length === 0) {
     // Return loading or handle the case when userId, userDetails, or allUsers are not available
-    return <div>Loading...</div>;
+    return (<>
+        <div>
+        <PieLoader/>
+        </div>
+      </>);
   }
   const defaultProfilePictureUrl = "https://mdbcdn.b-cdn.net/img/new/avatars/2.webp";
 
