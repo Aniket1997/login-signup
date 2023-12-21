@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+.navbar_brand{
+    padding: 7px 27px;
+    background-color:  #154360 !important;
+}
+.brand_name_home{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin-left: 10px;
+    padding-top: 10px;
+}
+.search-div{
+    padding-top: 10px;
+    background: #b3c3ccc7;
+    border: none;
+    border-radius: 34px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.search_input{
+    background: transparent;
+    border: none;
+}
+.search_input:hover{
+    border: none;
+}
+.search_task_icon{
+
+}
+.profile_manage{
+    text-align: right;
+}
+.zoom-in-icon {
+    animation: zoomIn 1s ease-in-out;
+    color: #bdb3e1d9;
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.2); /* Adjust the scale factor for the desired zoom level */
+    }
+  }
+  
+  

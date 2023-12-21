@@ -7,3 +7,23 @@
 .input_signup{
     border: 1px solid #918dbb ;
 }
+.profile-picture-container{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+}
+.add_profile_image{
+    color: rgb(118, 167, 200);
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 41px;
+    box-shadow: rgba(19, 158, 181, 0.43) 0px 8px 8px;
+
+}
+.brand_name{
+    font-family: 'Poppins', sans-serif;
+    color: #154360 !important;
+    margin-left: 0px;
+    padding-top: 10px;
+    font-size: 30px;
+}
